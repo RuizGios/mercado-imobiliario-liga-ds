@@ -268,7 +268,7 @@ def prepare_and_train(_df):
 if page == "Visão Geral":
     st.markdown("""
     <div style='padding:32px 0 8px'>
-        <div style='font-family:Fira Code;font-size:11px;color:#3b82f6;letter-spacing:2px;text-transform:uppercase;'>Liga de Data Science · UNICAMP</div>
+        <div style='font-family:Fira Code;font-size:11px;color:#FED531;letter-spacing:2px;text-transform:uppercase;'>Liga de Data Science · UNICAMP</div>
         <h1 style='font-size:36px;font-weight:600;margin:8px 0;'>Evolução e Previsão de<br>Preços Imobiliários</h1>
         <p style='color:#94a3b8;font-size:16px;max-width:700px;'>
             Análise de dados históricos referentes a vendas imobiliárias no estado de Connecticut (EUA),
@@ -623,10 +623,16 @@ elif page == "Simulador":
             mae_rf    = results["Random Forest"]["MAE"]
 
             st.markdown(f"""
-            <div class="card" style="border-top:3px solid #3b82f6;text-align:center;padding:32px">
-                <div style='font-family:Fira Code;font-size:11px;color:#94a3b8;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase'>VALOR ESTIMADO · RANDOM FOREST</div>
-                <div style='font-size:40px;font-weight:600;font-family:Fira Code;color:#3b82f6;'>${pred_rf:,.0f}</div>
-                <div style='color:#94a3b8;margin-top:8px;font-size:13px'>Margem de Erro (MAE): ${max(0,pred_rf-mae_rf):,.0f} — ${pred_rf+mae_rf:,.0f}</div>
+            <div class="card" style="border-top:3px solid #FED531; text-align:center; padding:32px">
+                <div style='font-family: Fira Code; font-size:11px; color:#FFFFFF; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase'>
+                    VALOR ESTIMADO · RANDOM FOREST
+                </div>
+                <div style='font-size:40px; font-weight:600; font-family: Fira Code; color:#FED531;'>
+                    \${pred_rf:,.0f}
+                </div>
+                <div style='color:#A0D0DF; margin-top:8px; font-size:13px'>
+                    Margem de Erro (MAE): \${max(0, pred_rf-mae_rf):,.0f} — \${pred_rf+mae_rf:,.0f}
+                </div>
             </div>""", unsafe_allow_html=True)
 
             st.markdown("**Estimativas por modelo algorítmico:**")
